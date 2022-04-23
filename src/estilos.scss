@@ -52,7 +52,7 @@ color:rgb(247, 242, 242);
 .boton-login{
     width:100px;
     background-color: #ffff;
-    color:darkorange;
+    color:rgb(0, 255, 34);
     border-radius: 10px;
 }
 .producto{
@@ -74,4 +74,11 @@ color:rgb(247, 242, 242);
     width: 100px;
     flex-direction: row;
     padding-top: 50px;
+}
+
+.modal{
+    position:fixed;
+    top:50%;
+    left:50%;
+    background-color: white;
 }

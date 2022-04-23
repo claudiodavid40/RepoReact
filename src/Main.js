@@ -4,7 +4,9 @@ import ItemCount from './ItemCount'
 
 
 const saludos= "Hola a todos , Bienvenidos"
-const onAdd="no hay stock"
+const onAdd=()=>{
+  
+}
 
 
 const Main = () => {
