@@ -14,8 +14,10 @@ const Main = () => {
   
   return (
     <>
-    <ItemListContainer greeting={saludos}/> 
-   <ItemCount stock={5} inicial={0} onAdd={onAdd} />
+    <div className='productoDos'>
+     
+    <ItemCount stock={5} inicial={0} onAdd={onAdd} />
+    </div>
     </>
   )
 }

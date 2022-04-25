@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import ItemListContainer from './Components/ItemListContainer'
+// import ItemsList from './Components/ItemsList'
 
 const ItemCount = (props) => {
 
@@ -32,9 +34,7 @@ if(!ok){
       return (
         <> 
         <div className='producto'>
-                <div>
-                    aca va la imagffffn y las desccripcion
-                </div>
+        <ItemListContainer/>
                 <div className='contador'>
                 <button onClick={clickbotonsuma}>+</button>
                 <p>{contador}</p>
@@ -50,9 +50,7 @@ if(!ok){
             return (
               <> 
               <div className='producto'>
-                      <div>
-                          aca va la imagffffn y las desccripcion
-                      </div>
+                     <ItemListContainer/>
                       <div className='contador'>
                       <button onClick={clickbotonsuma}>+</button>
                       <p>{contador}</p>

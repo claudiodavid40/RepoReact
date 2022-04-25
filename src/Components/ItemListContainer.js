@@ -1,10 +1,38 @@
+ import { useState, useEffect } from 'react'
+ import ItemsList from './ItemsList'
 
 
-const ItemListContainer = (props) => {
+const productobasedatos=[
+  {id:"1",
+   name:"remera Polaca",
+   price:300,
+   image:"aca va la imagen"
+  },
+   {
+    id:2,
+    name:"remera rusa",
+   price:400,
+  image:"aca va la imagen"}
+  ]
+
+
+ const ItemListContainer = () => {
+
+ const[prod,setProductos]=useState([])
+
+useEffect(()=>{
+
+    setTimeout(()=>{
+
+    setProductos(productobasedatos) 
+    },1000)
+
+},[])
+
   return (
-   <>  
-   <h1>{props.greeting}</h1>
-    </> 
+   <div> 
+    <ItemsList prod={productobasedatos}/> 
+    </div> 
   )
 }
 
