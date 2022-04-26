@@ -22,10 +22,22 @@ const productobasedatos=[
 
 useEffect(()=>{
 
+  const promesa=new Promise((res)=>{
+    res(productobasedatos)
+
+  })
+  .then((contenido)=>{
     setTimeout(()=>{
 
-    setProductos(productobasedatos) 
-    },1000)
+      setProductos(productobasedatos) 
+       },2000)
+    console.log("salio todo bien")
+  })
+  .catch((error)=>{
+    console.log("salio todo mal")
+
+  })
+    
 
 },[])
 
