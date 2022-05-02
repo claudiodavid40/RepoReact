@@ -1,51 +1,62 @@
- import { useState, useEffect } from 'react'
- import ItemsList from './ItemsList'
+import React, { useEffect, useState} from 'react'
+import ItemList from './ItemList'
 
-
-const productobasedatos=[
-  {id:"1",
-   name:"remera Polaca",
-   price:300,
-   image:"aca va la imagen"
-  },
-   {
+const productosiniciales=[{
+    id:1,
+    titulo:"remera",
+    imagen:"https://via.placeholder.com/300x300",
+    precio:26
+},
+{
     id:2,
-    name:"remera rusa",
-   price:400,
-  image:"aca va la imagen"}
-  ]
+    titulo:"pantalon",
+    imagen:"https://via.placeholder.com/300x300",
+    precio:26
+},
+{
+    id:3,
+    titulo:"saco",
+    imagen:"https://via.placeholder.com/300x300",
+    precio:26
+},
+
+]
+
+const ItemListContainer = () => {
 
 
- const ItemListContainer = () => {
 
- const[prod,setProductos]=useState([])
+const[produ,setProduc]=useState([])
+const[carg,setCargando]=useState(true)
 
 useEffect(()=>{
 
-  const promesa=new Promise((res)=>{
-    res(productobasedatos)
+    const promesa=new Promise((res)=>{
+        setTimeout(()=>{
+            res(productosiniciales) 
+        },2000)
 
-  })
-  .then((contenido)=>{
-    setTimeout(()=>{
-
-      setProductos(productobasedatos) 
-       },2000)
-    console.log("salio todo bien")
-  })
-  .catch((error)=>{
-    console.log("salio todo mal")
-
-  })
-    
+    })
+    .then(()=>{
+       
+      setCargando(false) 
+      setProduc(productosiniciales) 
+    })
 
 },[])
 
-  return (
-   <div> 
-    <ItemsList prod={productobasedatos}/> 
-    </div> 
-  )
+if (carg){
+    return(<p> Cargando...</p>)
+}
+else {
+    return (
+        
+         <ItemList productos={productosiniciales}/>
+         
+       )
+}
+
+ 
 }
 
 export default ItemListContainer

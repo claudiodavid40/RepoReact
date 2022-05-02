@@ -1,17 +1,15 @@
 import React from 'react'
-// import ItemListContainer from './ItemListContainer'
-// import ItemsList from './ItemsList'
 
-const Items = (props) => {
-
-  
+const Items = ({producto}) => {
   return (
-    <>
-    <p>{props.imagen}</p>
-    <p>{props.nombre}</p>
-    <p> el precio es: $<span> {props.price}</span></p> <br></br>
- 
-  </>
+      <>
+    <article>
+    <h3> {producto.titulo}</h3>
+     <img src={producto.imagen}/>
+     <p>{producto.precio} </p>
+     <button>Detalles</button>
+    </article>
+    </>
   )
 }
 

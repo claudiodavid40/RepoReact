@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import ItemListContainer from './Components/ItemListContainer'
+import ItemDetailContainer from './Components/ItemDetailContainer'
 // import ItemsList from './Components/ItemsList'
 
 const ItemCount = (props) => {
@@ -35,6 +36,7 @@ if(!ok){
         <> 
         <div className='producto'>
         <ItemListContainer/>
+        <ItemDetailContainer/>
                 <div className='contador'>
                 <button onClick={clickbotonsuma}>+</button>
                 <p>{contador}</p>
@@ -51,6 +53,8 @@ if(!ok){
               <> 
               <div className='producto'>
                      <ItemListContainer/>
+                     <ItemDetailContainer/>
+
                       <div className='contador'>
                       <button onClick={clickbotonsuma}>+</button>
                       <p>{contador}</p>

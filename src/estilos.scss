@@ -56,13 +56,13 @@ color:rgb(247, 242, 242);
     border-radius: 10px;
 }
 .producto{
-    background-color: aqua;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 200px;
-    height: 400px;
+    height: 100%;
     padding: 20px;
 }
 
@@ -81,4 +81,10 @@ color:rgb(247, 242, 242);
     top:50%;
     left:50%;
     background-color: white;
+}
+.productoDos{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    padding-left:50px
 }
