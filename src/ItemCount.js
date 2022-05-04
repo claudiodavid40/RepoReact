@@ -42,7 +42,7 @@ if(!ok){
                 <p>{contador}</p>
                 <button onClick={clickbotonresta}>-</button>
                 </div>
-                <button onClick={okcompra} >agregar al carrito</button>
+                <button onClick={okcompra} >agregar al carrio</button>
             
         </div>
         </>
